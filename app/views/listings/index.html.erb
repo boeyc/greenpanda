@@ -1,0 +1,32 @@
+<h1>Listing listings</h1>
+
+<table>
+  <tr>
+    <th>Domain</th>
+    <th>Thumbnail url</th>
+    <th>Url</th>
+    <th>Title</th>
+    <th>Subreddit</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @listings.each do |listing| %>
+    <tr>
+    <td><%= listing.domain %></td>
+    <td><%= listing.thumbnail_url %></td>
+    <td><%= listing.url %></td>
+    <td><%= listing.title %></td>
+    <td><%= listing.subreddit %></td>
+    <td><%= link_to 'Show', listing %></td>
+    <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+    <td><%= link_to 'Destroy', listing, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+
+</table>
+<% @listings.count %>
+<br />
+
+<%= link_to 'New Listing', new_listing_path %>

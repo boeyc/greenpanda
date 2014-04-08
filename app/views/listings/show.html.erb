@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Domain:</b>
+  <%= @listing.domain %>
+</p>
+
+<p>
+  <b>Thumbnail url:</b>
+  <%= @listing.thumbnail_url %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @listing.url %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @listing.title %>
+</p>
+
+<p>
+  <b>Subreddit:</b>
+  <%= @listing.subreddit %>
+</p>
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>
